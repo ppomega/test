@@ -1,6 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-console.log("Hello, World!");
-let c = 2;
-c = 5;
-//# sourceMappingURL=index.js.map
+const a = require('express');
+
+const app = a();
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
