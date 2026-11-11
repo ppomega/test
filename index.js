@@ -1,8 +1,9 @@
 const a = require('express');
 const app = a();
+require('dotenv').config()
 
 app.get('/', (req, res) => {
-  res.send('Hello Deepak Welcomne Back buddy');
+  res.send(`Hello ${process.env.HELLO}`);
 });
 
 app.listen(3000, () => {
